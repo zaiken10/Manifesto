@@ -1,0 +1,19 @@
+body {
+    background-color: yellow;
+    margin:0;
+}
+
+h1 {
+    color:red;
+    background-color:yellow;
+}
+
+.blackbackground {
+    background-color;
+    padding:5%;
+    border-bottom: 2px solid green;
+}
+
+.halfleft {
+    width:50%;
+}
