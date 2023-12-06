@@ -2,26 +2,176 @@
     
 <head>
 
-    <title> Steps For Game Day </title>
+    <title>Steps For Game Day</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<h1 class="blackbackground halfleft"> Steps For Game Day </h1>
+<h1 class="blackbackground halfleft">Steps For Game Day</h1>
     
 </html>
 <body>
-  1) It's okay to not be okay 
-  2) Its okay to need alone time when you feel overwhelmed 
-  3) Its okay to not be great at everything
-  4) Its okay to sleep in sometimes, you need rest and your body knows it
-  5) This game is HARD, Its okay to not know everything 
-  6) quite down your mind the best way you know how, relax, everything is gonna work out 
-  7) You're Beautiful, someone else will notoce it too, be patient
-  8)  It's okay to need self-care
-  9)  Its okay to nedd help and ask for it
-  10) Remember, it'll be okay
-     Enjoy the Game 
     
+<div id="content">
+    <div class="manifestotext">
+        
+        <p>1) It's okay to not be okay</p> 
+        <p></p>2) Its okay to need alone time when you feel overwhelmed 
+  <p>3) Its okay to not be great at everything</p>
+  <p>4) Its okay to sleep in sometimes, you need rest and your body knows it</p>
+  <p>5) This game is HARD, Its okay to not know everything </p>
+  <p>6) Quiet down your mind the best way you know how, relax, everything is gonna work out</p> 
+  <p>7) You're Beautiful, someone else will notoce it too, be patient</p>
+  <p>8)  It's okay to need self-care</p>
+  <p>9)  Its okay to nedd help and ask for it</p>
+  <p>10) Remember, it'll be okay</p>
+     <p>Enjoy the Game</p> 
+    </div>
+</div>  
+    
+<div id="cards">
+    <div id="card1"><img src= "images/playscape_-02.png"></div>
+        <div id="card2"><img src= "images/playscape_-03.png"></div>
+    <div id="card3"><img src= "images/playscape_-04.png"></div>
+
+</div>
+    
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("card1"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("card2"));
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+    <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("card3"));
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
 </body>
 
+<div id="greenbkg"><img src= "images/pooltablegreen.jpg"></div>
